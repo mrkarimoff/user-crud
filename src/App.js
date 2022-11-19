@@ -47,6 +47,8 @@ const App = () => {
           <button className="mx-2 btn btn-danger">delete</button>
         </div>
       ),
+      width: 208,
+      fixed: "right",
     },
   ];
 
@@ -58,17 +60,19 @@ const App = () => {
 
   return (
     <div className="App container mt-3">
-      <Button
-        onClick={() =>
-          dispatch(updateState({ stateName: "modalVisible", value: true }))
-        }
-        shape="round"
-        size={"large"}
-        type="primary"
-        className="m-3 w-25"
-      >
-        Add User
-      </Button>
+      <div style={{ width: "200px", marginBlock: "10px" }}>
+        <Button
+          block={true}
+          onClick={() =>
+            dispatch(updateState({ stateName: "modalVisible", value: true }))
+          }
+          shape="round"
+          size="large"
+          type="primary"
+        >
+          Add User
+        </Button>
+      </div>
       <Modal
         open={modalVisible}
         onOk={() => form.submit()}
@@ -122,6 +126,9 @@ const App = () => {
         bordered={true}
         dataSource={users}
         columns={columns}
+        scroll={{
+          x: 600,
+        }}
       ></Table>
     </div>
   );
