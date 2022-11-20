@@ -1,3 +1,10 @@
 .ant-modal-content {
   border-radius: 20px;
 }
+.ant-form-item {
+  margin-bottom: 15px;
+}
+
+/* body {
+  background-color: red;
+} */

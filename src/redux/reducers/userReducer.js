@@ -7,7 +7,8 @@ const initialState = {
   moneyInp: 0,
   ageInp: 0,
   modalVisible: false,
-  isLoading: true,
+  isLoading: false,
+  currentUser: "",
 };
 
 const userReducer = (state = initialState, action) => {
